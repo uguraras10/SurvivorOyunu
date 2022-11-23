@@ -9,7 +9,7 @@ public class ZombieHareket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        oyuncu = GameObject.Find("FPSController");
+        oyuncu = GameObject.Find("Oyuncu");
     }
 
     // Update is called once per frame
