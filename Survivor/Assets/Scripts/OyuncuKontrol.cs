@@ -6,6 +6,7 @@ public class OyuncuKontrol : MonoBehaviour
 {
     public Transform mermiPos;
     public GameObject mermi;
+    public GameObject patlama;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,10 @@ public class OyuncuKontrol : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject go = Instantiate(mermi, mermiPos.position, mermiPos.rotation) as GameObject;
+            GameObject goPatlama = Instantiate(patlama, mermiPos.position, mermiPos.rotation) as GameObject;
             go.GetComponent<Rigidbody>().velocity = mermiPos.transform.forward * 10f;
             Destroy(go.gameObject,2f);
+            Destroy(goPatlama.gameObject,2f);
         }
     }
 }
