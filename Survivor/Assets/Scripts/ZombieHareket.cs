@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ZombieHareket : MonoBehaviour
 {
     private GameObject oyuncu;
+    private int zombieCan = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +17,20 @@ public class ZombieHareket : MonoBehaviour
     void Update()
     {
         GetComponent<NavMeshAgent>().destination = oyuncu.transform.position;
+    }
+    private void OnCollisionEnter(Collision c)
+    {
+        if (c.collider.gameObject.tag.Equals("mermi")){
+
+            Debug.Log("Çarpýþma Gerçekleþti.");
+            zombieCan--;
+            if (zombieCan<1)
+            {
+                GetComponentInChildren<Animation>().Play("Zombie_Death_01");
+                Destroy(this.gameObject, 1.667f);
+
+            }
+        }
+        
     }
 }
