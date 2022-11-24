@@ -7,6 +7,7 @@ public class ZombieHareket : MonoBehaviour
 {
     private GameObject oyuncu;
     private int zombieCan = 3;
+    private float mesafe;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,11 @@ public class ZombieHareket : MonoBehaviour
     void Update()
     {
         GetComponent<NavMeshAgent>().destination = oyuncu.transform.position;
+        mesafe = Vector3.Distance(transform.position, oyuncu.transform.position);
+        if (mesafe < 10f)
+        {
+            GetComponentInChildren<Animation>().Play("Zombie_Attack_01");
+        }
     }
     private void OnCollisionEnter(Collision c)
     {

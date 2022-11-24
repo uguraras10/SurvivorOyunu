@@ -25,4 +25,12 @@ public class OyuncuKontrol : MonoBehaviour
             Destroy(goPatlama.gameObject,2f);
         }
     }
+    private void OnCollisionEnter(Collision c)
+    {
+        if (c.collider.gameObject.tag.Equals("zombi"))
+        {
+            Debug.Log("Zombi Saldýrýya geçti.");
+        }
+
+    }
 }

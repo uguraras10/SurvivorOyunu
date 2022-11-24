@@ -2065,6 +2065,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 82924861100508706, guid: e5f163c62e26d9a4daaf426dcf5b50be, type: 3}
+      propertyPath: MinDistance
+      value: 0.79917717
+      objectReference: {fileID: 0}
     - target: {fileID: 111143884934765314, guid: e5f163c62e26d9a4daaf426dcf5b50be, type: 3}
       propertyPath: m_Animation
       value: 
