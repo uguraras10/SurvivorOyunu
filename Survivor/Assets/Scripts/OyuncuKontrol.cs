@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OyuncuKontrol : MonoBehaviour
 {
     public Transform mermiPos;
     public GameObject mermi;
     public GameObject patlama;
+    public Image canImaji;
+    private float canDegeri = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,10 @@ public class OyuncuKontrol : MonoBehaviour
         if (c.collider.gameObject.tag.Equals("zombi"))
         {
             Debug.Log("Zombi Saldýrýya geçti.");
+            float x = canDegeri / 100f;
+            canDegeri -= 5f;
+            canImaji.fillAmount = x;
+            canImaji.color = Color.Lerp(Color.red, Color.green, x);
         }
 
     }
