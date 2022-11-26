@@ -33,11 +33,21 @@ public class OyuncuKontrol : MonoBehaviour
         if (c.collider.gameObject.tag.Equals("zombi"))
         {
             Debug.Log("Zombi Saldýrýya geçti.");
-            float x = canDegeri / 100f;
             canDegeri -= 5f;
+            float x = canDegeri / 100f;
             canImaji.fillAmount = x;
             canImaji.color = Color.Lerp(Color.red, Color.green, x);
         }
 
+    }
+    private void OnTriggerEnter(Collider c)
+    {
+        if (c.gameObject.tag.Equals("kalp"))
+        {
+            canDegeri += 5f;
+            float x = canDegeri / 100f;
+            canImaji.fillAmount = x;
+            canImaji.color = Color.Lerp(Color.red, Color.green, x);
+        }
     }
 }

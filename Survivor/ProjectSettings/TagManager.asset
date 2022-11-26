@@ -6,6 +6,7 @@ TagManager:
   tags:
   - zombi
   - mermi
+  - kalp
   layers:
   - Default
   - TransparentFX

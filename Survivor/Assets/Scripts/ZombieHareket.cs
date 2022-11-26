@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class ZombieHareket : MonoBehaviour
 {
+    public GameObject kalp;
     private GameObject oyuncu;
     private int zombieCan = 3;
     private float mesafe;
@@ -30,8 +31,9 @@ public class ZombieHareket : MonoBehaviour
 
             Debug.Log("Çarpýþma Gerçekleþti.");
             zombieCan--;
-            if (zombieCan<1)
+            if (zombieCan==0)
             {
+                Instantiate(kalp,transform.position,Quaternion.identity);
                 GetComponentInChildren<Animation>().Play("Zombie_Death_01");
                 Destroy(this.gameObject, 1.667f);
 

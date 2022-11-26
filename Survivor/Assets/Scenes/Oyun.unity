@@ -2313,6 +2313,10 @@ PrefabInstance:
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 82924861100508706, guid: e5f163c62e26d9a4daaf426dcf5b50be, type: 3}
+      propertyPath: MaxDistance
+      value: 3322.6943
+      objectReference: {fileID: 0}
+    - target: {fileID: 82924861100508706, guid: e5f163c62e26d9a4daaf426dcf5b50be, type: 3}
       propertyPath: MinDistance
       value: 0.79917717
       objectReference: {fileID: 0}
@@ -2418,6 +2422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a4f7306f5be7644851947671f51001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kalp: {fileID: 660497190964287504, guid: 9f545e751ca7b1c42833bafe36a237b8, type: 3}
 --- !u!4 &1801634131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4609030553193410, guid: e5f163c62e26d9a4daaf426dcf5b50be, type: 3}
