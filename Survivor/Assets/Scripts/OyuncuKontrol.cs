@@ -9,6 +9,7 @@ public class OyuncuKontrol : MonoBehaviour
     public GameObject mermi;
     public GameObject patlama;
     public Image canImaji;
+    public OyunKontrol oKontrol;
     private float canDegeri = 100f;
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,11 @@ public class OyuncuKontrol : MonoBehaviour
             float x = canDegeri / 100f;
             canImaji.fillAmount = x;
             canImaji.color = Color.Lerp(Color.red, Color.green, x);
+
+            if (canDegeri<=0)
+            {
+                oKontrol.OyunBitti();
+            }
         }
 
     }

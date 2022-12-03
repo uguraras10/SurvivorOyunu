@@ -577,6 +577,7 @@ MonoBehaviour:
   mermi: {fileID: 8647376820716795372, guid: fe24c38bef83d014f95b019ef736b9a6, type: 3}
   patlama: {fileID: 4848330589171548859, guid: 5ee88b8f7d7ae2b45a627f185d2ca3c6, type: 3}
   canImaji: {fileID: 1818751051}
+  oKontrol: {fileID: 371431375}
 --- !u!1 &371431373
 GameObject:
   m_ObjectHideFlags: 0

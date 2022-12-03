@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OyunKontrol : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class OyunKontrol : MonoBehaviour
     {
         puan += p;
         puanText.text = "" + puan;
+    }
+    public void OyunBitti()
+    {
+        PlayerPrefs.SetInt("puan",puan);
+        SceneManager.LoadScene("OyunBitti");
     }
 }
